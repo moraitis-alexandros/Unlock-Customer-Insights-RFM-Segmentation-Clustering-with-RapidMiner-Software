@@ -130,4 +130,52 @@ The segmented analysis identifies diverse customer groups, ranging from potentia
 *Overview:* Moderate Recency (average of 10 weeks), low Frequency (average of 2.6), and low Monetary (654 euros). Large customer base (2215).
 
 *Recommendations:* Identify their preferred products and peak buying periods for targeted marketing; send limited-time offers to boost engagement.
+
+8. **Seasonality**
+
+The analysis combines cluster segmentation with seasonality to understand distinct customer behaviors over time. Each cluster exhibits unique seasonal purchase patterns, providing actionable insights to tailor promotional strategies and engagement efforts effectively.
+
+**Cluster 0 (Potential Loyalist):**
+
+![seasonality0](images/0.png)
+
+Shows consistent buying with peaks in late September through October and November. Inactive late December to early January. 
+
+*Recommended actions:*
+
+📌 Activate engagement during inactive periods.
+
+📌Offer promotions during peaks to boost consumption.
+
+Cluster 1 (Hibernating):
+
+![seasonality1](images/1.png)
+
+Notable sales during Christmas-New Year and some peaks in April-May. 
+
+*Recommended actions:*
+
+📌Target promotions during these periods.
+
+Cluster 2 (Can’t Lose):
+
+![seasonality2](images/2.png)
+
+Similar to Hibernating, with peak buying late December. Inactive late December to early January. 
+
+*Recommended actions:*
+
+📌Activate engagement during inactive periods.
+
+📌Offer promotions during peak times.
+
+**Cluster 3 (First Timer):**
+
+![seasonality3](images/3.png)
+
+Higher sales mid-August to early December. No significant peaks.
+
+*Recommended actions:*
+
+📌Direct promotions during these specific periods for engagement.
    
