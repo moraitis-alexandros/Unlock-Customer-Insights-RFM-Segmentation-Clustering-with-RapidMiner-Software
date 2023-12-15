@@ -134,11 +134,7 @@ The segmented analysis identifies diverse customer groups, ranging from potentia
 
 The analysis combines cluster segmentation with seasonality to understand distinct customer behaviors over time. Each cluster exhibits unique seasonal purchase patterns, providing actionable insights to tailor promotional strategies and engagement efforts effectively.
 
-
-
 **👍 Cluster 0 (Potential Loyalist):**
-
-![seasonality0](images/0.png)
 
 Shows consistent buying with peaks in late September through October and November. Inactive late December to early January. 
 
@@ -148,11 +144,9 @@ Shows consistent buying with peaks in late September through October and Novembe
 
 📌Offer promotions during peaks to boost consumption.
 
-
+![seasonality0](images/0.png)
 
 **👍Cluster 1 (Hibernating):**
-
-![seasonality1](images/1.png)
 
 Notable sales during Christmas-New Year and some peaks in April-May. 
 
@@ -160,11 +154,9 @@ Notable sales during Christmas-New Year and some peaks in April-May.
 
 📌Target promotions during these periods.
 
-
+![seasonality1](images/1.png)
 
 **👍Cluster 2 (Can’t Lose):**
-
-![seasonality2](images/2.png)
 
 Similar to Hibernating, with peak buying late December. Inactive late December to early January. 
 
@@ -174,11 +166,9 @@ Similar to Hibernating, with peak buying late December. Inactive late December t
 
 📌Offer promotions during peak times.
 
-
+![seasonality2](images/2.png)
 
 **👍Cluster 3 (First Timer):**
-
-![seasonality3](images/3.png)
 
 Higher sales mid-August to early December. No significant peaks.
 
@@ -186,7 +176,7 @@ Higher sales mid-August to early December. No significant peaks.
 
 📌Direct promotions during these specific periods for engagement.
 
-
+![seasonality3](images/3.png)
 
 ## References
 
