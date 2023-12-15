@@ -84,7 +84,7 @@ round(Quantity*UnitPrice,2)
 
      The Monetary column displays values <0, so I set a filter for values >0, as these are the valid monetary values. Additionally, I notice that the volume of values is <25,000, so I place a filter for outliers <25,000, given that, as shown in the histogram, I have some extreme values.
 
-     ![Monetary](images/monetary.png)
+  ![Monetary](images/monetary.png)
 
 5. **Clustering with k-means**
 
