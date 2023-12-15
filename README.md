@@ -90,9 +90,11 @@ The Monetary column displays values <0, so I set a filter for values >0, as thes
 
 *Utilizing the optimization parameter operator to select the optimal number of k.*
 
-Based on literature, in order to choose the optimal k number, I employ the Optimization Parameter operator to find the k value resulting in the smallest Davies-Bouldin Index (DBI). The minimum k value (for RFM analysis) is k=4 (meaning 4 customer segments), so I proceed to modify the operator accordingly.
+Based on literature, in order to choose the optimal k number, I employ the Optimization Parameter operator to find the k value resulting in the smallest Davies-Bouldin Index (DBI). The minimum k value (for RFM analysis) is k=4 (meaning 4 customer segments), so I proceed to modify the operator accordingly. Also the clustering process modules an their connection on RapidMiner are displayed below:
 
-From the image below, I infer that for the dataset under consideration, **the optimal number of segments is k=4 with a DBI of -0.778. Therefore, I understand that I'll have 4 customer personas (segments) in my analysis**
+![Clustering](images/clustering.png)
+
+Moreover from the image below, I infer that for the dataset under consideration, **the optimal number of segments is k=4 with a DBI of -0.778. Therefore, I understand that I'll have 4 customer personas (segments) in my analysis**
 
 ![DaviesBouldin](images/daviesbouldain.png)
 
