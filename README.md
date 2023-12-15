@@ -32,17 +32,17 @@ The initials RFM correspond to the values of Recency, Frequency, Monetary. RFM a
 *Monetary --> What is the total amount the consumer spends*
 
 ## Project Overview:
-1. **Data Acquisition:**
+## 1. **Data Acquisition:**
 
-    The sales data can be found at the following link: https://www.kaggle.com/datasets/rupakroy/online-retail.
+  The sales data can be found at the following link: https://www.kaggle.com/datasets/rupakroy/online-retail.
 
-    There are 541,909 records (examples) of transactions.
+  There are 541,909 records (examples) of transactions.
   
-    It covers a time period from December 1st, 2010, to December 9th, 2011, which is a span of 12 months or approximately 55 weeks.
+  It covers a time period from December 1st, 2010, to December 9th, 2011, which is a span of 12 months or approximately 55 weeks.
 
-2. **Data Engineering**
+## 2. **Data Engineering**
 
-    Loading the data, proper definition of variables from the CSV file, and searching for missing values in attributes. Verifying whether missing values impact the analysis results. Also using the available data to create three new attributes (Recency, Frequency, Monetary) and constructing a new table (RFM table).
+  Loading the data, proper definition of variables from the CSV file, and searching for missing values in attributes. Verifying whether missing values impact the analysis results. Also using the available data to create three new attributes (Recency, Frequency, Monetary) and constructing a new table (RFM table).
    
   *Create RFM Attributes*
 
@@ -63,7 +63,7 @@ round(Quantity*UnitPrice,2)
 
   Finally, perform an aggregation using the sum function for 'monetary', grouped by 'customer_id', to determine the total amount of purchases made by each customer within the examined timeframe.
 
-3. **Data Transformation**
+## 3. **Data Transformation**
 
 Visualization of the new table and checking for outliers in each attribute. Applying filtering if extreme values are detected. Normalizing the data if they are on different scales.
 
@@ -84,9 +84,9 @@ The Monetary column displays values <0, so I set a filter for values >0, as thes
 ![Monetary](images/monetary4.png)
 
 
-5. **Clustering with k-means**
+## 4. **Clustering with k-means**
 
-    Applying clustering using the k-means algorithm and checking the clusters upon completion. Also assigning each customer_id to the corresponding cluster (Customer segmentation). I begin this step, with normalizing my data (Normalization) using Z-Transformation since, as easily distinguished, the data are in different measurement units. I also use the SetRole operator to designate the customer ID as a role.
+  Applying clustering using the k-means algorithm and checking the clusters upon completion. Also assigning each customer_id to the corresponding cluster (Customer segmentation). I begin this step, with normalizing my data (Normalization) using Z-Transformation since, as easily distinguished, the data are in different measurement units. I also use the SetRole operator to designate the customer ID as a role.
 
 *Utilizing the optimization parameter operator to select the optimal number of k.*
 
@@ -96,9 +96,9 @@ From the image below, I infer that for the dataset under consideration, **the op
 
 ![DaviesBouldin](images/daviesbouldain.png)
 
-## 7. **Segmentation Analysis**
+## 5. **Segmentation Analysis**
 
-    With the optimal segmentation number identified as k=4, I delve into the segmentation analysis. Each of the four customer personas represents a distinct group with unique behavioral patterns and preferences. This segmentation allows for tailored marketing strategies, personalized communication, and product offerings, aligning precisely with the distinct needs and tendencies of each customer segment. By understanding the nuances within these segments, the business can optimize its resources, enhance customer satisfaction, and foster long-term relationships, thereby maximizing its overall efficiency and profitability. Below there are the 4 different personas, their RFM values, followed by proposals for each one of them.
+  With the optimal segmentation number identified as k=4, I delve into the segmentation analysis. Each of the four customer personas represents a distinct group with unique behavioral patterns and preferences. This segmentation allows for tailored marketing strategies, personalized communication, and product offerings, aligning precisely with the distinct needs and tendencies of each customer segment. By understanding the nuances within these segments, the business can optimize its resources, enhance customer satisfaction, and foster long-term relationships, thereby maximizing its overall efficiency and profitability. Below there are the 4 different personas, their RFM values, followed by proposals for each one of them.
 
 ![Personas](images/personas.png)
    
@@ -128,9 +128,11 @@ The segmented analysis identifies diverse customer groups, ranging from potentia
 
 *Recommendations:* Identify their preferred products and peak buying periods for targeted marketing; send limited-time offers to boost engagement.
 
-## 8. **Seasonality**
+## 6. **Seasonality**
 
 The analysis combines cluster segmentation with seasonality to understand distinct customer behaviors over time. Each cluster exhibits unique seasonal purchase patterns, providing actionable insights to tailor promotional strategies and engagement efforts effectively.
+
+
 
 **👍 Cluster 0 (Potential Loyalist):**
 
@@ -144,6 +146,8 @@ Shows consistent buying with peaks in late September through October and Novembe
 
 📌Offer promotions during peaks to boost consumption.
 
+
+
 **👍Cluster 1 (Hibernating):**
 
 ![seasonality1](images/1.png)
@@ -153,6 +157,8 @@ Notable sales during Christmas-New Year and some peaks in April-May.
 *Recommended actions:*
 
 📌Target promotions during these periods.
+
+
 
 **👍Cluster 2 (Can’t Lose):**
 
@@ -166,6 +172,8 @@ Similar to Hibernating, with peak buying late December. Inactive late December t
 
 📌Offer promotions during peak times.
 
+
+
 **👍Cluster 3 (First Timer):**
 
 ![seasonality3](images/3.png)
@@ -175,4 +183,14 @@ Higher sales mid-August to early December. No significant peaks.
 *Recommended actions:*
 
 📌Direct promotions during these specific periods for engagement.
+
+
+
+## References
+
+*Inspired by [Value Segmentation & RFM Analysis]([https://mohamedirfansh.github.io/Airbnb-Data-Science-Project/](https://rapidminer.com/wp-content/uploads/2022/04/project14.pdf)*
+
+*Hofmann, M., & Klinkenberg, R. (2016). RapidMiner. Chapman and Hall/CRC. ISBN 9781498759861.*
+
+*Dwiza Riana (2018), Customer Segmentation based on RFM model and Clustering Techniques With K-Means Algorithm, 2018 Third International Conference on Informatics and Computing (ICIC)*
    
