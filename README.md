@@ -68,28 +68,38 @@ round(Quantity*UnitPrice,2)
 
 3. **Data Transformation**
 
-    Visualization of the new table and checking for outliers in each attribute. Applying filtering if extreme values are detected. Normalizing the data if they are on different scales.
+Visualization of the new table and checking for outliers in each attribute. Applying filtering if extreme values are detected. Normalizing the data if they are on different scales.
 
-    *Outliers*
+*Outliers*
 
-     Checking to detect any outliers. From the visualization, as seen in the image below, I observe the following:
+Checking to detect any outliers. From the visualization, as seen in the image below, I observe the following:
 
-    Recency doesn't display any outliers, and the data exhibits a certain distribution.
+Recency doesn't display any outliers, and the data exhibits a certain distribution.
  
-   ![Recency](images/recency.png)
+![Recency](images/recency.png)
 
-    The Frequency column shows a potential outlier at 89 (as also depicted in the related box plot below). Additionally, I notice that the number of occurrences is below 43, while I have three values (89, 86, 52) significantly deviating from the 43, potentially impacting the clustering algorithm as outliers. Logically, the business is likely aware of its top customers, those who shop 89, 86, 52, 43, 40 times during the year (almost weekly), and their specific characteristics. Therefore, the analysis to be conducted will be useful for mining insights from customers with less obvious traits. Hence, we'll filter the frequency for values <40.
+The Frequency column shows a potential outlier at 89 (as also depicted in the related box plot below). Additionally, I notice that the number of occurrences is below 43, while I have three values (89, 86, 52) significantly deviating from the 43, potentially impacting the clustering algorithm as outliers. Logically, the business is likely aware of its top customers, those who shop 89, 86, 52, 43, 40 times during the year (almost weekly), and their specific characteristics. Therefore, the analysis to be conducted will be useful for mining insights from customers with less obvious traits. Hence, we'll filter the frequency for values <40.
 
-  ![Frequency](images/frequency.png)
+![Frequency](images/frequency.png)
 
-     The Monetary column displays values <0, so I set a filter for values >0, as these are the valid monetary values. Additionally, I notice that the volume of values is <25,000, so I place a filter for outliers <25,000, given that, as shown in the histogram, I have some extreme values.
+The Monetary column displays values <0, so I set a filter for values >0, as these are the valid monetary values. Additionally, I notice that the volume of values is <25,000, so I place a filter for outliers <25,000, given that, as shown in the histogram, I have some extreme values.
 
-  ![Monetary](images/monetary.png)
+![Monetary](images/monetary4.png)
+
 
 5. **Clustering with k-means**
 
-    Applying clustering using the k-means algorithm and checking the clusters upon completion. Also assigning each customer_id to the corresponding cluster (Customer segmentation).
+    Applying clustering using the k-means algorithm and checking the clusters upon completion. Also assigning each customer_id to the corresponding cluster (Customer segmentation). I begin this step, with normalizing my data (Normalization) using Z-Transformation since, as easily distinguished, the data are in different measurement units. I also use the SetRole operator to designate the customer ID as a role.
 
-6. **Segmentation Analysis**
+*Utilizing the optimization parameter operator to select the optimal number of k.*
+
+Based on literature, in order to choose the optimal k number, I employ the Optimization Parameter operator to find the k value resulting in the smallest Davies-Bouldin Index (DBI). The minimum k value (for RFM analysis) is k=4 (meaning 4 customer segments), so I proceed to modify the operator accordingly.
+
+From the image below, I infer that for the dataset under consideration, **the optimal number of segments is k=4 with a DBI of -0.778. Therefore, I understand that I'll have 4 customer personas (segments) in my analysis**
+
+![Monetary](images/daviesbouldain.png)
+
+
+7. **Segmentation Analysis**
 
     Drawing conclusions about the purchasing behavior of each cluster. Creating consumer personas based on the characteristics of each cluster. Providing recommendations to the company for each consumer persona based on the cluster they belong to.  
