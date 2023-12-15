@@ -40,9 +40,6 @@ The initials RFM correspond to the values of Recency, Frequency, Monetary. RFM a
   
     It covers a time period from December 1st, 2010, to December 9th, 2011, which is a span of 12 months or approximately 55 weeks.
 
-
-
-
 2. **Data Engineering**
 
     Loading the data, proper definition of variables from the CSV file, and searching for missing values in attributes. Verifying whether missing values impact the analysis results. Also using the available data to create three new attributes (Recency, Frequency, Monetary) and constructing a new table (RFM table).
@@ -99,7 +96,7 @@ From the image below, I infer that for the dataset under consideration, **the op
 
 ![DaviesBouldin](images/daviesbouldain.png)
 
-7. **Segmentation Analysis**
+## 7. **Segmentation Analysis**
 
     With the optimal segmentation number identified as k=4, I delve into the segmentation analysis. Each of the four customer personas represents a distinct group with unique behavioral patterns and preferences. This segmentation allows for tailored marketing strategies, personalized communication, and product offerings, aligning precisely with the distinct needs and tendencies of each customer segment. By understanding the nuances within these segments, the business can optimize its resources, enhance customer satisfaction, and foster long-term relationships, thereby maximizing its overall efficiency and profitability. Below there are the 4 different personas, their RFM values, followed by proposals for each one of them.
 
@@ -107,35 +104,35 @@ From the image below, I infer that for the dataset under consideration, **the op
    
 The segmented analysis identifies diverse customer groups, ranging from potential loyalists and hibernating customers to high-value advocates and first-time buyers, each requiring targeted strategies for engagement and retention.
 
-**Cluster 0: Potential Loyalist**
+**👍Cluster 0: Potential Loyalist**
 
 *Overview:* Moderate Recency (average of 7 weeks), high Frequency (average of 8.2), and high Monetary (2560 euros). Medium-sized customer base (797).
 
 *Recommendations:* Target for engagement; encourage product reviews with discounts and introduce a loyalty program for regular customers.
 
-**Cluster 1: Hibernating**
+**👍Cluster 1: Hibernating**
 
 *Overview:* High Recency (average of 38 weeks), low Frequency (average of 1.7), and low Monetary (411 euros). Medium-sized customer base (1001).
 
 *Recommendations:* Launch low-cost campaigns to re-engage; consider targeted advertising.
 
-**Cluster 2: Can’t Lose**
+**👍Cluster 2: Can’t Lose**
 
 *Overview:* Very high Recency (average of 5 weeks), very high Frequency (average of 18.9), and very high Monetary (6236 euros). Small customer base (221).
 
 *Recommendations:* Leverage as brand advocates; encourage reviews, referral programs, and exclusive offers for high-value products.
 
-**Cluster 3: First Timer**
+**👍Cluster 3: First Timer**
 
 *Overview:* Moderate Recency (average of 10 weeks), low Frequency (average of 2.6), and low Monetary (654 euros). Large customer base (2215).
 
 *Recommendations:* Identify their preferred products and peak buying periods for targeted marketing; send limited-time offers to boost engagement.
 
-8. **Seasonality**
+## 8. **Seasonality**
 
 The analysis combines cluster segmentation with seasonality to understand distinct customer behaviors over time. Each cluster exhibits unique seasonal purchase patterns, providing actionable insights to tailor promotional strategies and engagement efforts effectively.
 
-**Cluster 0 (Potential Loyalist):**
+**👍 Cluster 0 (Potential Loyalist):**
 
 ![seasonality0](images/0.png)
 
@@ -147,7 +144,7 @@ Shows consistent buying with peaks in late September through October and Novembe
 
 📌Offer promotions during peaks to boost consumption.
 
-Cluster 1 (Hibernating):
+**👍Cluster 1 (Hibernating):**
 
 ![seasonality1](images/1.png)
 
@@ -157,7 +154,7 @@ Notable sales during Christmas-New Year and some peaks in April-May.
 
 📌Target promotions during these periods.
 
-Cluster 2 (Can’t Lose):
+**👍Cluster 2 (Can’t Lose):**
 
 ![seasonality2](images/2.png)
 
@@ -169,7 +166,7 @@ Similar to Hibernating, with peak buying late December. Inactive late December t
 
 📌Offer promotions during peak times.
 
-**Cluster 3 (First Timer):**
+**👍Cluster 3 (First Timer):**
 
 ![seasonality3](images/3.png)
 
