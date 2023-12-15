@@ -75,10 +75,16 @@ round(Quantity*UnitPrice,2)
      Checking to detect any outliers. From the visualization, as seen in the image below, I observe the following:
 
     Recency doesn't display any outliers, and the data exhibits a certain distribution.
+ 
+   ![Recency](images/recency.png)
 
     The Frequency column shows a potential outlier at 89 (as also depicted in the related box plot below). Additionally, I notice that the number of occurrences is below 43, while I have three values (89, 86, 52) significantly deviating from the 43, potentially impacting the clustering algorithm as outliers. Logically, the business is likely aware of its top customers, those who shop 89, 86, 52, 43, 40 times during the year (almost weekly), and their specific characteristics. Therefore, the analysis to be conducted will be useful for mining insights from customers with less obvious traits. Hence, we'll filter the frequency for values <40.
 
+  ![Frequency](images/frequency.png)
+
      The Monetary column displays values <0, so I set a filter for values >0, as these are the valid monetary values. Additionally, I notice that the volume of values is <25,000, so I place a filter for outliers <25,000, given that, as shown in the histogram, I have some extreme values.
+
+     ![Monetary](images/monetary.png)
 
 5. **Clustering with k-means**
 
