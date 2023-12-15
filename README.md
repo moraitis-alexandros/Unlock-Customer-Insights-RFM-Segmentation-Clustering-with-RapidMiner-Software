@@ -97,9 +97,40 @@ Based on literature, in order to choose the optimal k number, I employ the Optim
 
 From the image below, I infer that for the dataset under consideration, **the optimal number of segments is k=4 with a DBI of -0.778. Therefore, I understand that I'll have 4 customer personas (segments) in my analysis**
 
-![Monetary](images/daviesbouldain.png)
+![Monetary](images/personas.png)
+
+
 
 
 7. **Segmentation Analysis**
 
-    Drawing conclusions about the purchasing behavior of each cluster. Creating consumer personas based on the characteristics of each cluster. Providing recommendations to the company for each consumer persona based on the cluster they belong to.  
+    With the optimal segmentation number identified as k=4, I delve into the segmentation analysis. Each of the four customer personas represents a distinct group with unique behavioral patterns and preferences. This segmentation allows for tailored marketing strategies, personalized communication, and product offerings, aligning precisely with the distinct needs and tendencies of each customer segment. By understanding the nuances within these segments, the business can optimize its resources, enhance customer satisfaction, and foster long-term relationships, thereby maximizing its overall efficiency and profitability. Below there are the 4 different personas, their RFM values, followed by proposals for each one of them.
+
+![Monetary](images/daviesbouldain.png)
+   
+The segmented analysis identifies diverse customer groups, ranging from potential loyalists and hibernating customers to high-value advocates and first-time buyers, each requiring targeted strategies for engagement and retention.
+
+**Cluster 0: Potential Loyalist**
+
+*Overview:* Moderate Recency (average of 7 weeks), high Frequency (average of 8.2), and high Monetary (2560 euros). Medium-sized customer base (797).
+
+*Recommendations:* Target for engagement; encourage product reviews with discounts and introduce a loyalty program for regular customers.
+
+**Cluster 1: Hibernating**
+
+*Overview:* High Recency (average of 38 weeks), low Frequency (average of 1.7), and low Monetary (411 euros). Medium-sized customer base (1001).
+
+*Recommendations:* Launch low-cost campaigns to re-engage; consider targeted advertising.
+
+**Cluster 2: Can’t Lose**
+
+*Overview:* Very high Recency (average of 5 weeks), very high Frequency (average of 18.9), and very high Monetary (6236 euros). Small customer base (221).
+
+*Recommendations:* Leverage as brand advocates; encourage reviews, referral programs, and exclusive offers for high-value products.
+
+**Cluster 3: First Timer**
+
+*Overview:* Moderate Recency (average of 10 weeks), low Frequency (average of 2.6), and low Monetary (654 euros). Large customer base (2215).
+
+*Recommendations:* Identify their preferred products and peak buying periods for targeted marketing; send limited-time offers to boost engagement.
+   
